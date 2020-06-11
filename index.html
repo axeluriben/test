@@ -22,7 +22,7 @@
 
         var camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
         camera.position.y = 5; 
-	camera.position.z = 10; //que tan alejada esta la camara de la pantalla o la pieza
+	camera.position.z = 15; //que tan alejada esta la camara de la pantalla o la pieza
         
         var renderer = new THREE.WebGLRenderer({antialias: true});
         renderer.setClearColor("#e5e5e5");
@@ -50,6 +50,13 @@
 	var grid = new THREE.GridHelper( 50, 50, 0xffffff, 0x555555 );
 	scene.add( grid );
 					
+	// parte que añade la rotacion del entorno			
+	var controls = new OrbitControls( camera, renderer.domElement );
+	controls.addEventListener( 'change', render );
+	controls.update();
+	window.addEventListener( 'resize', onWindowResize, false );
+			
+	// parte que crea la pieza 				
 	var render = function(){
 		requestAnimationFrame (render);
 		mesh.rotation.x +=0.05;
