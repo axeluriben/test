@@ -59,6 +59,14 @@
 	grid.material.opacity = 0.25;
 	grid.material.transparent = true;
 	scene.add( grid );
+	
+	//establece ground shade y etc
+	
+	var ground = new THREE.Mesh( new THREE.PlaneBufferGeometry( 2000, 2000 ), new THREE.MeshPhongMaterial( { color: 0x999999, depthWrite: false } ) );
+	ground.rotation.x = - Math.PI / 2;
+	ground.receiveShadow = true;
+	scene.add( ground );
+	
 					
 	//añade movimiento del entorno	
 	var controls = new OrbitControls( camera, renderer.domElement );
