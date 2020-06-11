@@ -12,7 +12,7 @@ import {
 	MOUSE,
 	Quaternion,
 	Spherical,
-	//TOUCH,
+	TOUCH,
 	Vector2,
 	Vector3
 } from "https://cdnjs.cloudflare.com/ajax/libs/three.js/r99/three.module.js";
