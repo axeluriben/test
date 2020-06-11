@@ -52,7 +52,9 @@
 	scene.add(light)
 	
 	//añade referencia grid
-	var grid = new THREE.GridHelper( 50, 50, 0xffffff, 0x555555 );
+	var size = 10;
+	var divisions = 10;
+	var grid = new THREE.GridHelper( size, divisions, 0xffffff, 0x555555 );
 	scene.add( grid );
 					
 	//añade movimiento del entorno	
