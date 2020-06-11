@@ -14,7 +14,7 @@
         <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 </body>
 											 
-<h3>aqui comienza esto</h3>
+
 											 
 <script>
 											 
@@ -45,6 +45,9 @@
 	var light = new THREE.PointLight (0xFFFFFF,1,500);
 	light.position.set (10,0,25);
 	scene.add(light)
+	
+	var grid = new THREE.GridHelper( 50, 50, 0xffffff, 0x555555 );
+	scene.add( grid );
 					
 	var render = function(){
 		requestAnimationFrame (render);
