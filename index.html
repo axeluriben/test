@@ -40,13 +40,6 @@
             camera.updateProjectionMatrix();
         })
 					
-	/*
-	var geometry = new THREE.BoxGeometry (1,1,1);
-	var material = new THREE.MeshLambertMaterial ({color: 0xFFCC00});
-	var mesh = new THREE.Mesh (geometry, material);
-	mesh.position.y = 1;
-	scene.add(mesh);
-	*/
 	
 	//cargar modelo
 	
@@ -67,10 +60,19 @@
 
 	} );
 	
-	
+	/*
 	var light = new THREE.PointLight (0xFFFFFF,1,500);
 	light.position.set (10,0,25);
 	scene.add(light)
+	*/
+	
+	// nueva luz direccional
+	
+	var light = new THREE.DirectionalLight( 0xaabbff, 0.3 );
+		light.position.x = 300;
+		light.position.y = 250;
+		light.position.z = - 500;
+		scene.add( light );
 	
 	//añade referencia malla
 	var size = 50;
