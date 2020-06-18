@@ -130,6 +130,20 @@
 	gui.add( params, 'transparencia' );
 	gui.add( params, 'wire' );
 	
+	//para mostrar modo alambre
+	 var playbackConfig = {
+
+		
+		wireframe: false
+
+	};
+	
+	
+	gui.add( playbackConfig, 'wireframe', false ).onChange( function () {
+
+	 material.setWireframe( playbackConfig.wireframe );
+
+	} );
 	
 						
 	//añade movimiento del entorno	
