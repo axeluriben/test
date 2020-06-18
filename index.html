@@ -70,7 +70,9 @@
 	var loader = new STLLoader();
 	loader.load( './modelos/console.STL', function ( geometry ) {
 
-	var material = new THREE.MeshPhongMaterial( { color: 0xff5533, specular: 0x111111, shininess: 200, opacity:0.5,transparent:true } );
+	//con este renglon se hace transparente el modelo	
+	//var material = new THREE.MeshPhongMaterial( { color: 0xff5533, specular: 0x111111, shininess: 200, opacity:0.5,transparent:true } );	
+	var material = new THREE.MeshPhongMaterial( { color: 0xff5533, specular: 0x111111, shininess: 200 } );
 	var mesh = new THREE.Mesh( geometry, material );
 
 	mesh.position.set( 10, 2, -8 );
