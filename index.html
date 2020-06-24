@@ -58,7 +58,21 @@
 	
 	//mostrar estadisticas y funcionalidades
 	
+	function displaygui(){
+		var gui = new.dat.GUI();
+		
+		parameters = {
+			a:false,
+			b:false,
+		}
+		
+		gui.add(parameters,'a').name('Transparente');
+		gui.add(parameters,'B').name('Alambre');
+		
+		gui.close ();
+		gui.open();
 	
+	}
 
 	
 	//cargar modelo
