@@ -33,7 +33,10 @@
 	
    	var scene = new THREE.Scene();
 	var gui;
-	var params ={a:false, b: false};
+	var params ={
+		a: false, 
+		b: false
+	};
 	
 	//parametros de la caja superior
 
@@ -61,8 +64,8 @@
 	
 		var gui = new GUI();
 		
-		gui.add( params, 'Transparencia' );
-		gui.add( params, 'Alambre' );
+		gui.add( params, 'a' );
+		gui.add( params, 'b' );
 		gui.open();
 	
 	
