@@ -61,13 +61,9 @@
 	function displaygui(){
 		var gui = new GUI();
 		
-		params = {
-			a:false,
-			b:false,
-		}
+		gui.add( params, 'transparencia' );
 		
-		gui.add(params,'a').name('Transparente');
-		gui.add(params,'B').name('Alambre');
+		
 		
 		
 		gui.open();
