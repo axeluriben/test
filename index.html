@@ -59,18 +59,13 @@
 	
 	//mostrar estadisticas y funcionalidades
 	
-	function displaygui(){
 		var gui = new GUI();
 		
 		gui.add( params, 'Transparencia' );
 		gui.add( params, 'Alambre' );
-		
-		
-		
-		
 		gui.open();
 	
-	}
+	
 
 	
 	//cargar modelo
@@ -152,8 +147,7 @@
 	// mesh.setWireframe( playbackConfig.wireframe );
 
 	//} );
-	
-	displaygui();
+
 						
 	//añade movimiento del entorno	
 	var controls = new OrbitControls( camera, renderer.domElement );
