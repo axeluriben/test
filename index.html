@@ -32,7 +32,8 @@
 	import { GUI } from '/test/dat.gui.module.js';
 	
    	var scene = new THREE.Scene();
-	var gui,params;
+	var gui;
+	var params ={a:false, b: false};
 	
 	//parametros de la caja superior
 
@@ -61,7 +62,8 @@
 	function displaygui(){
 		var gui = new GUI();
 		
-		gui.add( params, 'transparencia' );
+		gui.add( params, 'Transparencia' );
+		gui.add( params, 'Alambre' );
 		
 		
 		
