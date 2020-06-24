@@ -32,7 +32,7 @@
 	import { GUI } from '/test/dat.gui.module.js';
 	
    	var scene = new THREE.Scene();
-	var gui;
+	var gui, jar;
 	var params ={
 		Transparencia: false, 
 		Alambre: false
@@ -62,12 +62,8 @@
 	
 	//mostrar estadisticas y funcionalidades
 	
-		var gui = new GUI();
-		
-		gui.add( params, 'Transparencia' );
-		gui.add( params, 'Alambre' );
-		gui.open();
 	
+		
 	
 
 	
@@ -91,6 +87,18 @@
 	scene.add( mesh );
 
 	} );
+	//visualñizar check box
+		var gui = new GUI();
+		
+		var tran = gui.add( params, 'Transparencia' );
+		gui.add( params, 'Alambre' );
+		gui.open();
+		
+		var dimen = gui.addFolder ('trans');
+		tran.onChange(function(jar){mesh.visible = jar;});
+	
+	
+	
 	
 	/*
 	var light = new THREE.PointLight (0xFFFFFF,1,500);
