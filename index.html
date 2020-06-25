@@ -76,19 +76,6 @@
 	//var material = new THREE.MeshPhongMaterial( { color: 0xff5533, specular: 0x111111, shininess: 200, opacity:0.5,transparent:true } );	
 	var material = new THREE.MeshPhongMaterial( { color: 0xff5533, specular: 0x111111, shininess: 200 } );
 		
-	
-	var gui = new GUI();
-		
-		var tran = gui.add( params, 'Transparencia' );
-		gui.add( params, 'Alambre' );
-		gui.open();
-		var jar2 = new THREE.MeshPhongMaterial( { color: 0xff5533, specular: 0x111111, shininess: 200, opacity:0.5,transparent:true } );	
-		//var dimen = gui.addFolder ('trans');
-		tran.onChange(function(jar){material = jar2;});
-		
-		
-		
-	
 	var mesh = new THREE.Mesh( geometry, material );
 
 	mesh.position.set( 10, 2, -8 );
@@ -105,6 +92,16 @@
 
 	} );
 	
+	var gui = new GUI();
+		
+	        gui.add( params, 'Transparencia' );
+		gui.add( params, 'Alambre', false ).onChange(function(){
+		mesh.setWireframe(params.wireframe);	
+		
+		} );
+		gui.open();
+		
+		
 	
 	
 	
