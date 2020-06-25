@@ -91,7 +91,7 @@
 		gui.open();
 		
 		//var dimen = gui.addFolder ('trans');
-		tran.onChange(function(jar){mesh.visible = false;});
+		tran.onChange(function(jar){new THREE.MeshPhongMaterial( { color: 0xff5533, specular: 0x111111, shininess: 200, opacity:0.5,transparent:true } );	});
 		
 		
 	
