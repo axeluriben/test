@@ -84,7 +84,7 @@
 		gui.open();
 		
 		//var dimen = gui.addFolder ('trans');
-		tran.onChange(function(jar){ material = new THREE.MeshPhongMaterial( { color: 0xff5533, specular: 0x111111, shininess: 200 } ); });
+		tran.onChange(function(jar){var material = new THREE.MeshPhongMaterial( { color: 0xff5533, specular: 0x111111, shininess: 200, opacity:0.5,transparent:true } );});
 		
 		
 		
